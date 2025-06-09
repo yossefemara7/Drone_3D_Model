@@ -48,7 +48,7 @@ scene.add(ambientLight);
 // === ENVIRONMENT MAP (EXR) ===
 const exrLoader = new EXRLoader();
 exrLoader.setPath('public/hdri/');
-exrLoader.load('https://dl.dropboxusercontent.com/scl/fi/fwaafm3z6r3zzp0z12nsh/example.exr?rlkey=yk8jtbmwe86962p9un5zobdlw&st=jdsji167&dl=0exr', function (texture) {
+exrLoader.load('example.exr', function (texture) {
   texture.mapping = THREE.EquirectangularReflectionMapping;
   scene.environment = texture;
   scene.background = texture;
@@ -56,7 +56,7 @@ exrLoader.load('https://dl.dropboxusercontent.com/scl/fi/fwaafm3z6r3zzp0z12nsh/e
 
 // === MODEL LOADING ===
 const loader = new GLTFLoader().setPath('public/');
-loader.load('https://dl.dropboxusercontent.com/scl/fi/hce52mxmomsup2k7nldxi/drone_model_texturedv6.glb?rlkey=mhvny96ql3ea6dto773urwfpk&st=bukmcphs&dl=0', (gltf) => {
+loader.load('drone_model_texturedv9.glb', (gltf) => {
   console.log('loading model');
   const mesh = gltf.scene;
 
